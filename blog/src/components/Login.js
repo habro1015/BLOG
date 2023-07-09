@@ -47,7 +47,10 @@ const StyledLink = styled(Link)`
   color: #007bff;
   text-decoration: none;
 `;
-
+const StyledLink2 = styled(Link)`
+  color: #007bff;
+  text-decoration: none;
+`;
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -90,6 +93,8 @@ function Login() {
         <SubmitButton type="submit">로그인</SubmitButton>
       </Form>
       <StyledLink to="/">메인 페이지로 이동</StyledLink>
+      <br></br>
+      <StyledLink2 to="/">회원가입</StyledLink2>
     </LoginWrapper>
   );
 }
