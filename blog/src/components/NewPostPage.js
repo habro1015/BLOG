@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-
+//프로그래머스 과제 했을 때 참고해서 디자인
 const NewPostWrapper = styled.div`
   max-width: 400px;
   margin: 0 auto;

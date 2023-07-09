@@ -54,15 +54,13 @@ function Login() {
   const navigate = useNavigate();
 
   const handleFormSubmit = e => {
-    e.preventDefault();
-    // 로그인 로직을 구현하고 유효성 검사 등을 수행합니다.
-    // 예시로는 간단하게 username과 password를 확인하는 로직을 작성합니다.
+    e.preventDefault();//이거 안하니까 굉장히 매우 번거로웠음.
     if (username === 'username' && password === 'password') {
-      // 로그인 성공 시 메인 페이지로 이동합니다.
+      //구현하지 못해.....로그인을 저장해둠
       navigate('/');
     } else {
-      // 로그인 실패 시 오류 처리 등을 수행합니다.
-      alert('로그인 실패');
+      // 로그인 실패 시 alert 
+      alert('로그인 실패입니다. 다시 시도해주세요');
       navigate('/');
     }
   };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
+//편집용 페이지
 function EditPostPage({ posts }) {
   const { id } = useParams();
   const [title, setTitle] = useState('');

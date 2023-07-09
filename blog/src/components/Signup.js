@@ -1,52 +1,54 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+//구현 실패-App.js에 저장 안함
+function Signup() {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-function NewPostPage({ addPost }) {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const navigate = useNavigate();
-
-  const handleSubmit = e => {
+  const handleFormSubmit = e => {
     e.preventDefault();
 
-    const newPost = {
-      id: Date.now(),
-      title: title,
-      content: content
-    };
-
-    addPost(newPost);
-    setTitle('');
-    setContent('');
-    navigate('/');
+    console.log('회원 가입 정보:');
+    console.log('사용자명:', username);
+    console.log('이메일:', email);
+    console.log('비밀번호:', password);
   };
 
   return (
     <div>
-      <h2>새 글 작성</h2>
-      <form onSubmit={handleSubmit}>
+      <h2>회원 가입</h2>
+      <form onSubmit={handleFormSubmit}>
         <div>
-          <label htmlFor="title">제목:</label>
+          <label htmlFor="username">사용자명:</label>
           <input
             type="text"
-            id="title"
-            value={title}
-            onChange={e => setTitle(e.target.value)}
+            id="username"
+            value={username}
+            onChange={e => setUsername(e.target.value)}
           />
         </div>
         <div>
-          <label htmlFor="content">본문:</label>
-          <textarea
-            id="content"
-            value={content}
-            onChange={e => setContent(e.target.value)}
+          <label htmlFor="email">이메일:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
           />
         </div>
-        <button type="submit">작성 완료</button>
+        <div>
+          <label htmlFor="password">비밀번호:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+          />
+        </div>
+        <button type="submit">회원 가입</button>
       </form>
-      <Link to="/">메인 페이지로 이동</Link>
     </div>
   );
 }
 
-export default NewPostPage;
+export default Signup;

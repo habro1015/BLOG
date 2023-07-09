@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-// 스타일을 적용할 컴포넌트를 styled-components로 정의
+
 const Wrapper = styled.div`
   padding: 20px;
   margin-left: 10px;
@@ -30,8 +30,6 @@ const PostLink = styled(Link)`
     text-decoration: underline;
   }
 `;
-
-//여기까지 styled-components
 function MainPage({ posts, addPost }) {
   const [latestPosts, setLatestPosts] = useState([]);
 
