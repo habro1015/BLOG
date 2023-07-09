@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'KOTRA_BOLD-Bold';
+  src: url('./KOTRA_BOLD.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.Header{
+  font-family: KOTRA_BOLD-Bold;
+  background-color: aliceblue;
+}
