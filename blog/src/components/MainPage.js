@@ -30,6 +30,8 @@ const PostLink = styled(Link)`
     text-decoration: underline;
   }
 `;
+
+//여기까지 styled-components
 function MainPage({ posts, addPost }) {
   const [latestPosts, setLatestPosts] = useState([]);
 
